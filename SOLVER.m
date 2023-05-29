@@ -43,3 +43,5 @@ function [root, iter] = newton(f, x0)
     end
     error('Method failed to converge');
 end
+
+
