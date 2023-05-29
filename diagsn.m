@@ -1,4 +1,4 @@
-function ret = f4(n,m)
+function ret = diagsn(n,m)
   if(exist("m")==0)
     m=n;
   end
@@ -6,6 +6,11 @@ function ret = f4(n,m)
   j=2;
   flag=0;
   tmpNum=2;
+
+  nTmp=n;
+  n=m;
+  m=nTmp;
+
   ret = ones(n,m);
   ret(1,2)=2;
 
@@ -47,7 +52,9 @@ function ret = f4(n,m)
       end;
     endif
   endwhile
-  ret=ret'
+
+  ret=ret
+  ret=ret';
 ##
 ##  res=zeros(n)
 ##  for i =1:n

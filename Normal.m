@@ -25,6 +25,6 @@ function retval = Normal (fun, x0, y0)
     ylabel('y');
     zlabel('z');
     shading interp;
-    facealpha (0.5);
+##    facealpha (0.5);
     hold off
 endfunction
