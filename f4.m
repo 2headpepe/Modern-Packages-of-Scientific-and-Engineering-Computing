@@ -47,7 +47,6 @@ function ret = f4(n,m)
       end;
     endif
   endwhile
-  ret=ret'
 ##
 ##  res=zeros(n)
 ##  for i =1:n
