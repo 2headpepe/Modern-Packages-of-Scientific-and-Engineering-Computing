@@ -12,7 +12,7 @@ function retval = SOLVER(f, x0)
     ANS1 = [];
     for i = 1:length(X0)
         fz =  newton(f, X0(i));
-        if abs(f(fz)) < 1e-6 && fz > -x0 && fz < x0
+        if abs(f(fz)) < 1e-6 && fz > -x0 && fz < x0 && fz!=99999999
             ANS1(end+1) = fz;
         end
     end
@@ -24,7 +24,7 @@ end
 function [root, iter] = newton(f, x0)
   tol = 1e-6;
   h=1e-10;
-  maxiter=1000;
+  maxiter=100;
     iter = 0;
     while iter < maxiter
         fx = f(x0);
@@ -41,7 +41,7 @@ function [root, iter] = newton(f, x0)
         x0 = x1;
         iter = iter + 1;
     end
-    error('Method failed to converge');
+    root=99999999;
 end
 
 
